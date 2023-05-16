@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #6DDAFC;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-button-two{
+  background-color: #6DDAFC;
+  border-style: none;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+  margin-right: 25%;
+}
+
+.carousel-item {
+  display:inline-block;
+  height: 490px;
+  /*background-color: #fff;*/
+  background-color: #6DDAFC;
+
+}
+
+.carousel-img {
+  width: 300px;
+  height: 300px; 
+  margin: auto;
+  display: block;
+  margin-top: 3rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.carousel-title{
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: white;
+}
+
+.carousel-button{
+  background-color: #6DDAFC;
+  border-style: none;
+  
+}
+
+/* final stage */
+
+.carousel-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button-arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.indicators {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.indicator-buttons {
+  border: none;
+  cursor: pointer;
+}
+
+.indicators > button {
+  margin: 5px;
+  background: none;
+}
+
+.indicator-symbol {
+  color: #26343f;
+}
+
+.indicator-symbol-active {
+  color: #ffffff;
+}
