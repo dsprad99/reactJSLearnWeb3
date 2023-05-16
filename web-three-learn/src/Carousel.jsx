@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { CarouselItem } from "./CarouselItem";
+import Quiz from "./quiz";
+
 export const Carousel = () => {
+
+  //our active index to map through the items array to 0
   const [activeIndex, setActiveIndex] = useState(0);
   const items = [
     {
@@ -16,6 +20,8 @@ export const Carousel = () => {
       icon: require("./img/cryptocurrency.png"),
     },
   ];
+
+  //will update our index everytime it is called
   const updateIndex = (newIndex) => {
     if (newIndex < 0) {
       newIndex = 0;
@@ -27,11 +33,16 @@ export const Carousel = () => {
   };
 
   const [show, setShow] = useState(true)
-  
-  if(show == true){
-    return (
+
+  //if show is equal to true, our intital value then 
+  //we will open up the main menu
+  if (show == true) {
+      return (
       <div className="carousel">
-        <button onClick={sayHello} className="carousel-button-two">
+          <button className="carousel-button-two">
+
+        {/*if this button is clicked then show will be set false and will not show the main menu
+        also allowing for our quiz component to be shown*/}
         <button onClick={() => setShow(!show)} className="carousel-button">
         <div className="inner" style={{ transform: `translate(-${activeIndex * 100}%)`}}>
           {items.map((item) => {
@@ -84,9 +95,11 @@ export const Carousel = () => {
   );
   }
 
-  function sayHello() {
-    alert('Hello!');
+//if show is equal to false then the quiz will show up
+  if (show == false){
+    return (
+      <Quiz/>
+    );
   }
-
   
 };
